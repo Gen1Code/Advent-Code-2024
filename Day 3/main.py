@@ -40,6 +40,7 @@ while i+4 < length:
     i = nii + 1
 
 print(sum)
+
 #Part 2: O(n), O(1) (using regex iter)
 import re
 match_mul = r"mul\((\d{1,3}),(\d{1,3})\)"
