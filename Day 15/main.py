@@ -73,7 +73,6 @@ for l in inp:
 robot = (48,24)
 
 for action in sequence:
-    print(action)
     d = action_direction[action]
     new_pos = (robot[0]+d[0], robot[1]+d[1])
 
