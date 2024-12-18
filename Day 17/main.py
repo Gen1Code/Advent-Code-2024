@@ -67,10 +67,10 @@ print(','.join(map(str, output)))
 
 def step(a):
     b = a % 8
-    b = b ^ 1
-    c = int(a / (2**b))
-    b = b ^ c
-    b = b ^ 4
+    b = b^1
+    c = int(a/(2**b))
+    b = b^c
+    b = b^4
     return b % 8
 
 stack = []
@@ -89,5 +89,5 @@ while stack:
         print(a)
         break
     
-    for b in range(7, -1, -1): 
-        stack.append((idx - 1, a*8 + b))
+    for r in range(7, -1, -1): 
+        stack.append((idx - 1, a*8 + r))
