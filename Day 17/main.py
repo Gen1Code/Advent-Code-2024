@@ -65,7 +65,7 @@ print(','.join(map(str, output)))
 #5,5: out b % 8             (only important part per loop)
 #3,0: jump to 0 if a != 0   (for loop depends entirely on a)
 
-def step(a):
+def loop(a):
     b = a % 8
     b = b^1
     c = int(a/(2**b))
@@ -82,7 +82,7 @@ for a in range(7,-1,-1):
 while stack:
     idx, a = stack.pop()
     
-    if step(a) != p[idx]:
+    if loop(a) != p[idx]:
         continue
 
     if idx == 0:
